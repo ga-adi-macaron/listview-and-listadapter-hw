@@ -4,15 +4,24 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:padding="3dp">
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/footballImage"
+        android:src="@drawable/football"
+        android:layout_margin="8dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/text1"
+        android:layout_toRightOf="@id/footballImage"
         android:textSize="23sp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/text2"
-        android:layout_below="@id/text1"/>
+        android:layout_alignBottom="@id/footballImage"
+        android:layout_toRightOf="@id/footballImage"
+        android:textSize="18sp"/>
 
 </RelativeLayout>

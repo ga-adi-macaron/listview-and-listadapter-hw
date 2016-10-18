@@ -8,8 +8,9 @@ public class Player {
     private String mName;
     private String mRole;
 
-    public Player(String name) {
+    public Player(String name,String role) {
         mName = name;
+        mRole = role;
     }
 
     public String getName() {
@@ -18,5 +19,13 @@ public class Player {
 
     public void setName(String name) {
         mName = name;
+    }
+
+    public String getRole() {
+        return mRole;
+    }
+
+    public void setRole(String role) {
+        mRole = role;
     }
 }

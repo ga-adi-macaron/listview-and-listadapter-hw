@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">ListView-HW</string>
+    <string-array name="position_array">
+        <item>Linebacker</item>
+        <item>Quaterback</item>
+        <item>Kicker</item>
+        <item>Holder</item>
+        <item>Wide Receiver</item>
+        <item>Cornerback</item>
+        <item>Safety</item>
+        <item>Tight End</item>
+        <item>Punter</item>
+        <item>Gunner</item>
+    </string-array>
 </resources>
