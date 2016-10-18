@@ -58,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
                     mPlayerList.remove(mPlayerList.size() - 1);
                     mArrayAdapter.notifyDataSetChanged();
                 } else {
-                    Toast.makeText(MainActivity.this, "Nothing to delete!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Nothing to delete!",
+                            Toast.LENGTH_SHORT).show();
                 }
             }
         });
