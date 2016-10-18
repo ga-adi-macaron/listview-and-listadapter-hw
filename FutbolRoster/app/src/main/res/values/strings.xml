@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">FutbolRoster</string>
+    <string-array name="positions">
+        <item>Forward</item>
+        <item>Goalie</item>
+        <item>Striker</item>
+        <item>R.Back</item>
+        <item>L.Back</item>
+        <item>Stopper</item>
+        <item>Sweeper</item>
+        <item>Midfielder</item>
+    </string-array>
+</resources>

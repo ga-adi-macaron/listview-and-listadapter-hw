@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/picView"
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+        android:src="@drawable/soccer_ball"
+        android:layout_marginRight="10sp"/>
+
+    <TextView
+        android:id="@+id/pName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/picView"
+        android:textSize="25sp"
+        android:text="Test String"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/pPosition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/picView"
+        android:layout_below="@id/pName"
+        android:textSize="15sp"
+        android:textColor="#444444"
+        android:text="Test name"
+        android:paddingLeft="10sp"/>
+</RelativeLayout>
