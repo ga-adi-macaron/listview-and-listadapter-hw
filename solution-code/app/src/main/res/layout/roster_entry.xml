@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <!--
+        This file describes a single entry in the roster ListView.
+        It will be used multiple times to inflate each View object that is added to the ListView.
+    -->
+    <ImageView
+        android:id="@+id/football_icon"
+        android:src="@drawable/football_icon"
+        android:contentDescription="@string/football_icon_description"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/player_name"
+        android:layout_toRightOf="@id/football_icon"
+        android:layout_toEndOf="@id/football_icon"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/player_position"
+        android:layout_toRightOf="@id/football_icon"
+        android:layout_toEndOf="@id/football_icon"
+        android:layout_below="@id/player_name"
+        android:textStyle="italic"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

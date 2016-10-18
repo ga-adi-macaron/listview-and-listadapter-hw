@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Football Roster</string>
+
+    <string name="player_name_input_hint">Enter player name</string>
+    <string name="player_name_input_error">Name cannot be blank</string>
+
+    <string-array name="positions">
+        <item>Offensive Lineman</item>
+        <item>Quarterback</item>
+        <item>Running Back</item>
+        <item>Receiver</item>
+        <item>Defensive Lineman</item>
+        <item>Linebacker</item>
+        <item>Defensive Back</item>
+    </string-array>
+    
+    <string name="add_button_text">Add player</string>
+    <string name="remove_button_text">Remove last player</string>
+
+    <string name="football_icon_description">Football icon</string>
+</resources>
