@@ -2,7 +2,6 @@ package com.joelimyx.listview_hw;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,11 +14,7 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import org.w3c.dom.CharacterData;
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -30,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private List<Player> mPlayerList;
     private BaseAdapter myAdapter;
     private Spinner mSpinner;
-    private String mPosition;
+    private String mRole;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                mPosition = (String) parent.getSelectedItem();
+                mRole = (String) parent.getSelectedItem();
             }
 
             @Override
@@ -102,15 +97,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()){
+            //Add Player
             case R.id.addButton:
                 String temp = mEditText.getText().toString();
+                boolean isRepeat=false;
+                //Check Empty
                 if (temp.isEmpty()){
                     mEditText.setError("Please Enter a Name");
                 }else {
-                    mPlayerList.add(new Player(temp, mPosition));
+                    //Loop thru and check if repetition
+                    for (Player player : mPlayerList) {
+                        if (player.getName().equalsIgnoreCase(temp)&&player.getRole().equalsIgnoreCase(mRole)){
+                            mEditText.setError("Do not enter the same person and role.");
+                            isRepeat = true;
+                        }
+                    }
+                }
+
+                if(!(isRepeat||temp.isEmpty())){
+                    mPlayerList.add(new Player(temp, mRole));
                     myAdapter.notifyDataSetChanged();
                 }
                 break;
+            //Remove Player
             case R.id.removeButton:
                 if (!mPlayerList.isEmpty()) {
                     mPlayerList.remove(mPlayerList.size() - 1);
