@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<TextView
+    android:id="@+id/player_name1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Ronaldo de Lima"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    android:layout_margin="10sp"/>
+
+    <TextView
+        android:id="@+id/position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Striker/CF"
+        android:layout_below="@id/player_name1"
+        android:layout_margin="10sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zinedine Zidane"
+        android:layout_below="@id/position"
+        android:layout_margin="10sp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+
+</RelativeLayout>
